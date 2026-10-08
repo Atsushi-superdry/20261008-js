@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+
+* { 
+    box-sizing: border-box; 
+}
+
+
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: Arial, "Yu Gothic", sans-serif;
+    background: #fff4f9;
+    color: #574557;
+    line-height: 1.8;
+}
+
+
+#wrapper {
+    width: 1000px;
+    max-width: 95%;
+    margin: 30px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+header {
+    position: sticky;
+    top: 20px;
+    width: 240px;
+    flex-shrink: 0;
+    padding: 25px 15px;
+    background: #f9dce9;
+    border-radius: 12px;
+}
+header h1 {
+    color: #bc6597;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+header p { 
+    margin: 10px 0 25px; 
+    font-size: 12px; 
+    text-align: center; 
+}
+nav li { 
+    margin-bottom: 6px; 
+}
+nav a {
+    display: block;
+    padding: 12px 15px;
+    background: #fff;
+    color: #ac6d98;
+    text-decoration: none;
+    border-radius: 6px;
+}
+nav li.current a, nav a:hover { 
+    background: #e79cc2; 
+    color: #fff; 
+}
+
+
+main {
+    min-width: 0;
+    flex: 1;
+    padding: 35px;
+    background: #fff;
+    border-radius: 12px;
+}
+section { 
+    margin-bottom: 65px; 
+    scroll-margin-top: 20px; 
+}
+
+
+section:last-child { 
+    margin-bottom: 0; 
+}
+
+
+section h2 {
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f4d5e5;
+    color: #bf709c;
+    font-size: 23px;
+    font-weight: bold;
+}
+section p { 
+    margin-bottom: 20px; 
+}
+.main-doro {
+    display: block;
+    width: 280px;
+    max-width: 100%;
+    margin: 10px auto 0;
+}
+
+
+.gallery { display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+}
+.gallery figure { 
+    padding: 12px; 
+    border: 1px solid #f1dce7; 
+    border-radius: 8px; 
+}
+.gallery img { 
+    width: 100%; 
+    height: 175px; 
+    object-fit: contain; 
+}
+
+.gallery figcaption { 
+    margin-top: 6px; 
+    text-align: center; 
+    font-size: 13px; 
+}
+
+.gift-doro { 
+    display: block; 
+    width: 260px; 
+    max-width: 100%; 
+    margin: 15px auto; 
+}
+.back-top { 
+    color: #b96a98; 
+}
+
+
+
+@media (max-width: 680px) {
+    #wrapper { 
+        display: block; 
+        margin: 10px auto; 
+    }
+    header { 
+        position: static; 
+        width: 100%; 
+        margin-bottom: 15px; 
+        padding: 15px; 
+    }
+    header p { 
+        margin: 5px 0 12px; 
+    }
+    nav ul { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px; 
+    }
+    nav li { 
+        margin: 0; 
+    }
+    nav a { 
+        text-align: center; 
+        padding: 8px; 
+        font-size: 13px; 
+    }
+    main { 
+        padding: 20px; 
+    }
+    .gallery { 
+        gap: 8px; 
+    }
+
+    .gallery figure { 
+        padding: 6px; 
+    }
+    
+    .gallery img { 
+        height: 130px; 
+    }
+    section h2 { 
+        font-size: 20px; 
+    }
+}
