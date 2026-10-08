@@ -7,7 +7,7 @@ $(function() {
                 $("nav li:nth-child(" + i + ")").addClass("current");
             }
 
-            if($(window).scrollTop() + $(window).height() >= $(document).height() - 2) {
+            if($("section:last-child").offset().top < $(window).scrollTop() + $(window).height() * 0.7) {
                 $("nav li").removeClass("current");
                 $("nav li:last-child").addClass("current");
             }
