@@ -6,6 +6,11 @@ $(function() {
 
                 $("nav li:nth-child(" + i + ")").addClass("current");
             }
+
+            if($(window).scrollTop() + $(window).height() >= $(document).height() - 2) {
+                $("nav li").removeClass("current");
+                $("nav li:last-child").addClass("current");
+            }
         }
     });
 });
